@@ -9,7 +9,7 @@ class Axis extends Component {
   }
 
   componentDidUpdate() {
-    this.renderD3()
+    this.renderD3() // explicitly re-render, since DOM updated by D3, not React
   }
 
   renderD3 = () => {
@@ -17,11 +17,12 @@ class Axis extends Component {
                     .domain([0,10])
                     .range([0,200])
     const axis = d3.axisBottom(scale)
-    d3.select(this.gRef.current).call(axis)
+    d3.select(this.gRef.current).call(axis) // let D3 handle updating the DOM node
   }
 
   render() {
-    return <g transform='translate(10,30)' ref={ this.gRef } />
+    const { y } = this.props
+    return <g transform={ `translate( 10, ${y} )` } ref={ this.gRef } />
   }
 }
 
