@@ -1,7 +1,13 @@
 {
   "scripts": {
-    "build": "webpack --mode development",
+    "build": "webpack --mode development --module-bind js=babel-loader",
     "start": "yarn run build && lite-server --baseDir='dist'"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-react",
+      "@babel/preset-env"
+    ]
   },
   "dependencies": {
     "react": "^16.8.4",
