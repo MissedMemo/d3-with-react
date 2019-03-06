@@ -1,7 +1,7 @@
 {
   "scripts": {
     "build": "webpack --mode development --module-bind js=babel-loader",
-    "start": "yarn run build && lite-server --baseDir='dist'"
+    "start": "yarn run build && cp index.html.template dist/index.html && lite-server --baseDir='dist'"
   },
   "babel": {
     "presets": [
