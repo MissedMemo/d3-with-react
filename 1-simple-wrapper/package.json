@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build": "webpack --mode development --module-bind js=babel-loader",
+    "build": "webpack --mode development --module-bind js=babel-loader --module-bind jsx=babel-loader",
     "start": "yarn run build && cp index.html.template dist/index.html && lite-server --baseDir='dist'"
   },
   "babel": {
