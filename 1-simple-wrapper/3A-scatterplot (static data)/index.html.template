@@ -5,14 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>React Demo</title>
-    <style>
-      .bar { fill: steelblue; }
-      .bar:hover { fill: brown; }
-      .axis--x path { display: none; }
-    </style>
   </head>
   <body>
     <div id='root'></div>
-    <script src='./main.js'></script>
   </body>
 </html>
