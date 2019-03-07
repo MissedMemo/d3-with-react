@@ -3,15 +3,6 @@
     "build": "webpack --mode development",
     "start": "yarn run build && lite-server --baseDir='dist'"
   },
-  "babel": {
-    "presets": [
-      "@babel/preset-react",
-      "@babel/preset-env"
-    ],
-    "plugins": [
-      "@babel/plugin-proposal-class-properties"
-    ]
-  },
   "dependencies": {
     "d3": "^5.9.1",
     "react": "^16.8.4",
