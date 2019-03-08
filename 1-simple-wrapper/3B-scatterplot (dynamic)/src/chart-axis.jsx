@@ -1,12 +1,14 @@
-import React, { Component } from "react";
-import * as d3 from "d3";
-import styled from "styled-components";
+import React, { Component } from 'react';
+import * as d3 from 'd3';
+//import styled from 'styled-components';
 
+/*
 const Text = styled.text`
-    fill: black;
+    fill: blue;
     font-family: sans-serif;
-    font-size: 10px;
+    font-size: 18px;
 `;
+*/
 
 class ChartAxis extends Component {
   constructor() {
@@ -48,7 +50,7 @@ class ChartAxis extends Component {
 
     return (
       <g ref={this.gRef} transform={`translate(${x}, ${y})`}>
-        <Text {...this.labelPos}>{label}</Text>
+        <text {...this.labelPos} >{label}</text>
       </g>
     );
   }
