@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
 import * as d3 from 'd3';
-//import styled from 'styled-components';
+import styled from 'styled-components';
 
-/*
 const Text = styled.text`
     fill: blue;
     font-family: sans-serif;
-    font-size: 18px;
+    font-size: 16px;
 `;
-*/
 
 class ChartAxis extends Component {
+  
   constructor() {
     super();
     this.gRef = React.createRef();
@@ -29,7 +28,7 @@ class ChartAxis extends Component {
 
     d3.select(this.gRef.current).call(d3[`axis${location}`](this.props.scale));
   }
-  a;
+  
   get labelPos() {
     const { location, scale } = this.props;
 
@@ -47,10 +46,10 @@ class ChartAxis extends Component {
 
   render() {
     const { x, y, label } = this.props;
-
+    
     return (
       <g ref={this.gRef} transform={`translate(${x}, ${y})`}>
-        <text {...this.labelPos} >{label}</text>
+        <Text {...this.labelPos} >{label}</Text>
       </g>
     );
   }
